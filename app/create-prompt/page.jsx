@@ -37,7 +37,7 @@ const createPrompt = () => {
     }
   };
 
-  return (
+  return session?.user ? (
     <Form
       type="Create"
       post={post}
@@ -45,7 +45,9 @@ const createPrompt = () => {
       submitting={submitting}
       handleSubmit={createPrompt}
     />
-  );
+  ):(
+    <h1>You have to be singed in to create a prompt</h1>
+  )
 };
 
 export default createPrompt;
