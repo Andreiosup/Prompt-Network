@@ -13,6 +13,7 @@ const PromptCard = ({ postData, handleTagClick, handleEdit, handleDelete }) => {
 
   const handleProfileClick = () => {};
 
+
   const handleCopy = () => {
     setCopiedPrompt(postData.prompt);
     navigator.clipboard.writeText(postData.prompt);

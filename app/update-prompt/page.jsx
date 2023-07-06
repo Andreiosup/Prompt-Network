@@ -16,7 +16,7 @@ const EditPrompt = () => {
 
   useEffect(() => {
     getPromptDetails()
-    console.log(post)  
+  
   }, [promptId]);
 
   const getPromptDetails = async () => {
@@ -34,7 +34,7 @@ const EditPrompt = () => {
 
     if (!prompt) return alert("Prompt ID not found")
 
-    console.log(post.prompt,post.tag)
+  
 
     try {
       const response = await fetch(`/api/prompt/${promptId}`, {
